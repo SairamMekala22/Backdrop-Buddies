@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Mode - Game Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/2641/2641457.png" alt="Logo" class="logo-img">
+            <span>YOURSPACE</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="leaderboard.html"><i class="fas fa-trophy"></i> Leaderboard</a></li>
+                <li class="nav-right">
+                    <a href="login.html" id="loginBtn" class="nav-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                </li>
+                <li class="nav-right">
+                    <a href="profile.html" id="profileBtn" class="nav-btn"><i class="fas fa-user"></i> Profile</a>
+                </li>
+            </ul>
+        </nav>
+    </div><br>
+    <br>
+    <br>
+  <br>
+    <main class="quiz-container">
+        <div class="quiz-header">
+            <h1>Quiz Mode</h1>
+            <div class="quiz-stats">
+                <span class="score">Score: <span id="score">0</span></span>
+                <span class="timer"><i class="fas fa-clock"></i> <span id="time">60</span>s</span>
+                <span class="question-number">Question <span id="currentQuestion">1</span>/10</span>
+            </div>
+        </div>
+
+        <div class="quiz-content">
+            <div id="start-screen" class="quiz-screen">
+                <h2>Welcome to Quiz Mode!</h2>
+                <p>Test your knowledge with 10 challenging questions.</p>
+                <p>You have 60 seconds to complete the quiz.</p>
+                <button id="start-quiz" class="quiz-button">Start Quiz</button>
+            </div>
+
+            <div id="question-screen" class="quiz-screen" style="display: none;">
+                <div class="question-card">
+                    <p id="question-text" class="question-text"></p>
+                    <div id="options" class="options">
+                        <!-- Options will be dynamically added here -->
+                    </div>
+                    <div class="question-navigation">
+                        <button id="prev-question" class="nav-button" disabled>
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button id="next-question" class="nav-button" disabled>
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result-screen" class="quiz-screen" style="display: none;">
+                <h2>Quiz Complete!</h2>
+                <div class="result-stats">
+                    <p>Final Score: <span id="final-score">0</span></p>
+                    <p>Correct Answers: <span id="correct-answers">0</span>/10</p>
+                    <p>Time Taken: <span id="time-taken">0</span> seconds</p>
+                </div>
+                <div class="result-buttons">
+                    <button id="try-again" class="quiz-button">Try Again</button>
+                    <button id="back-to-home" class="quiz-button secondary" onclick="window.location.href='index.html'">Back to Home</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

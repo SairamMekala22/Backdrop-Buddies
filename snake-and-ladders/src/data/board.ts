@@ -1,0 +1,20 @@
+export const snakesAndLadders: SnakeLadder[] = [
+  { start: 16, end: 6, type: 'snake' },
+  { start: 47, end: 26, type: 'snake' },
+  { start: 49, end: 11, type: 'snake' },
+  { start: 56, end: 53, type: 'snake' },
+  { start: 62, end: 19, type: 'snake' },
+  { start: 64, end: 60, type: 'snake' },
+  { start: 87, end: 24, type: 'snake' },
+  { start: 93, end: 73, type: 'snake' },
+  { start: 95, end: 75, type: 'snake' },
+  { start: 98, end: 78, type: 'snake' },
+  { start: 4, end: 14, type: 'ladder' },
+  { start: 9, end: 31, type: 'ladder' },
+  { start: 20, end: 38, type: 'ladder' },
+  { start: 28, end: 84, type: 'ladder' },
+  { start: 40, end: 59, type: 'ladder' },
+  { start: 51, end: 67, type: 'ladder' },
+  { start: 63, end: 81, type: 'ladder' },
+  { start: 71, end: 91, type: 'ladder' }
+];

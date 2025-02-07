@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quiz Leaderboard</h1>
+            <nav>
+                <button id="globalBtn" class="active">Global Top 10</button>
+                <button id="personalBtn">Your Scores</button>
+                <button onclick="window.location.href='index.html'" class="home-btn">Home</button>
+            </nav>
+        </header>
+
+        <main>
+            <div id="globalLeaderboard" class="leaderboard-section">
+                <h2>Global Top Scores</h2>
+                <div class="leaderboard-table">
+                    <div class="table-header">
+                        <span>Rank</span>
+                        <span>Player</span>
+                        <span>Score</span>
+                        <span>Accuracy</span>
+                        <span>Time</span>
+                    </div>
+                    <div id="globalScores" class="table-body">
+                        <!-- Scores will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="personalLeaderboard" class="leaderboard-section hidden">
+                <h2>Your Top Scores</h2>
+                <div class="leaderboard-table">
+                    <div class="table-header">
+                        <span>Date</span>
+                        <span>Score</span>
+                        <span>Correct</span>
+                        <span>Total</span>
+                        <span>Time</span>
+                    </div>
+                    <div id="personalScores" class="table-body">
+                        <!-- Personal scores will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="leaderboard.js"></script>
+</body>
+</html>

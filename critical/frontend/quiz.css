@@ -1,0 +1,248 @@
+.quiz-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.quiz-header h1 {
+    color: #6c5ce7;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.quiz-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.quiz-content {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-screen {
+    background: white;
+    border-radius: 15px;
+    padding: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#start-screen h2 {
+    color: #6c5ce7;
+    margin-bottom: 1rem;
+}
+
+#start-screen p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.quiz-button {
+    background: linear-gradient(135deg, #6c5ce7, #a363d9);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem;
+}
+
+.quiz-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+}
+
+.quiz-button.secondary {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+.question-card {
+    text-align: left;
+}
+
+.question-text {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.option {
+    background: #f5f6fa;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.option:hover {
+    background: #eee;
+    transform: translateX(5px);
+}
+
+.option.selected {
+    background: #6c5ce7;
+    color: white;
+    border-color: #6c5ce7;
+}
+
+.option.correct {
+    background: #2ecc71;
+    color: white;
+    border-color: #2ecc71;
+}
+
+.option.wrong {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.explanation {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-left: 4px solid #6c5ce7;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #2c3e50;
+    animation: slideIn 0.3s ease-out;
+}
+
+.explanation strong {
+    color: #6c5ce7;
+}
+
+/* Question Navigation */
+.question-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.nav-button {
+    background: linear-gradient(135deg, #6c5ce7, #a363d9);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+}
+
+.nav-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.nav-button i {
+    font-size: 0.9rem;
+}
+
+.result-stats {
+    background: #f5f6fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+}
+
+.result-stats p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+
+.result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .quiz-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .quiz-button {
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .result-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Loading Animation */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #f3f3f3;
+    border-bottom-color: #6c5ce7;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 1rem;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
